@@ -34,10 +34,7 @@ while(true){
     for(int ch=0; ch< 8; ++ch){
         for(int j =0;j <1024;++j){
             file.read((char*) &buf2b, 2);
-            // debug
-
-            UShort_t value = ((0x00FF & buf2b)<<8) | ((0xFF00 & buf2b)>>8); // Yuto cant understand this magic
-            wfs[ch][j] = value;
+            wfs[ch][j] = buf2b;
         }
     }   
 
